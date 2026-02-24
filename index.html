@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lleva Atacado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔐 LOGIN -->
+<div id="cadastro" class="tela">
+    <h1>LLEVA DENIM</h1>
+    <p>Portal Atacadista</p>
+    <input type="text" id="cnpj" placeholder="Digite o CNPJ da loja">
+    <button onclick="entrar()">Acessar</button>
+</div>
+
+<!-- 🛒 SISTEMA -->
+<div id="sistema" class="hidden">
+
+<header>
+    <h1>LLEVA DENIM - ATACADO</h1>
+    <p>CNPJ: <span id="cnpjExibido"></span></p>
+</header>
+
+<section class="produtos">
+
+    <div class="card">
+        <h2>Calça Skinny</h2>
+        <p>R$ 90,00 unidade</p>
+        <input type="number" min="0" value="0" id="skinny">
+        <button onclick="adicionar('Calça Skinny', 90, 'skinny')">
+            Adicionar Grade
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>Cargo Urban</h2>
+        <p>R$ 110,00 unidade</p>
+        <input type="number" min="0" value="0" id="cargo">
+        <button onclick="adicionar('Cargo Urban', 110, 'cargo')">
+            Adicionar Grade
+        </button>
+    </div>
+
+</section>
+
+<section class="carrinho">
+    <h2>Pedido</h2>
+    <div id="lista"></div>
+    <h3 id="totalPedido">Total: R$ 0</h3>
+    <button class="enviar" onclick="enviarPedido()">
+        Enviar Pedido
+    </button>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
